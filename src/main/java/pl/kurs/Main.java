@@ -18,24 +18,20 @@ public class Main {
         Book book3 = new Book(3, "1984", "George Orwell");
         ArrayList<Book> books = new ArrayList<>(List.of(book1, book2, book3));
 
-        Book.borrowBook(book1,user1);
+
+        Book.borrowBook(book1, user1);
+        System.out.println();
+        Book.borrowBook(book1, user2);
+        System.out.println();
         Book.bookInfo(book1);
+        System.out.println();
         Book.bookInfo(book2);
+        System.out.println();
 
-        System.out.println(findBookById(books,1));
+        System.out.println(Book.findBookById(books, 1));
+        System.out.println();
+        System.out.println(Book.findBookById(books, 4));
 
 
     }
-
-
-    public static Optional<Book> findBookById(List<Book> bookList, long id) {
-        Optional<Book> foundBook = bookList.stream()
-                .filter(book -> book.getId() == id)
-                .findFirst();
-
-        return foundBook;
-
-    }
-
-
 }

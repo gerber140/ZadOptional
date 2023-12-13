@@ -47,27 +47,36 @@ public class Book {
         this.borrower = borrower;
     }
 
-    public static void bookInfo(Book book){
-        if(book.getBorrower().isPresent()){
-            System.out.println("Książkę \"" + book.title + "\" wypożyczył: " + book.borrower);
-        }
-        else{
-            System.out.println("Książka jest dostępna!");
-        }
-    }
-
     public static void borrowBook(Book book, User user) {
         if (book.getBorrower().isEmpty()) {
             book.setBorrower(user);
             System.out.println(user.getName() + " wypożyczył książkę: " + book.getTitle());
         } else {
-            System.out.println("Książka jest już wypożyczona");
+            throw new IllegalArgumentException("Książka jest już wypożyczona");
+        }
+
+
+    }
+
+
+    public static void bookInfo(Book book) {
+        if (book.getBorrower().isPresent()) {
+            System.out.println("Książkę \"" + book.title + "\" wypożyczył: " + book.borrower);
+        } else {
+            System.out.println("Książka jest dostępna!");
         }
     }
 
+    public static Optional<Book> findBookById(List<Book> bookList, long id) {
+        return bookList.stream()
+                .filter(book -> book.getId() == id)
+                .findFirst();
+    }
+
+
     @Override
     public String toString() {
-        return "Book{" +
+        return "{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
