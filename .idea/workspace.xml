@@ -7,7 +7,6 @@
     <list default="true" id="bacf2b9b-43c6-4e54-b9bd-d0c395b44c43" name="Changes" comment="Commit one">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/kurs/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/kurs/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/kurs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/kurs/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702414420723</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit one">
+      <option name="closed" value="true" />
+      <created>1702510143468</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702510143469</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -1,6 +1,7 @@
 package pl.kurs;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class Book {
@@ -67,10 +68,11 @@ public class Book {
         }
     }
 
-    public static Optional<Book> findBookById(List<Book> bookList, long id) {
+    public static Book findBookById(List<Book> bookList, long id) {
         return bookList.stream()
                 .filter(book -> book.getId() == id)
-                .findFirst();
+                .findFirst()
+                .orElseThrow(() -> new NoSuchElementException("Książka o id:" + id + " nie znaleziona"));
     }
 
 
